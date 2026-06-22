@@ -9,7 +9,6 @@ Model::Model(bool cubic) {
     startingLineNodeCount = setts["isolines"]["initial_node_count"].value_or(50);
     countToBump = setts["isolines"]["spline_bump_count"].value_or(0);
     startingU = setts["isolines"]["primary_u_value"].value_or(0.5);
-    flipPrimary = setts["model"]["flip_primary"].value_or(0);
     uOffset = setts["isolines"]["u_spline_offset"].value_or(0.0);
     vOffset = setts["isolines"]["v_spline_offset"].value_or(0.0);
     layersCubic = setts["grid"]["layers"].value_or(3);
@@ -42,6 +41,7 @@ Model::Model(bool cubic) {
 
     mesh = new Mesh(modelFile, inputType);
     mesh->scale = setts["model"]["scale"].value_or(1.0);
+    mesh->flipPrimary = setts["model"]["flip_primary"].value_or(0);
 
     if (!inputType.compare("raytrace") || !inputType.compare("bezier")) {
         mesh->triRows = setts["triangulation"]["x"].value_or(20);
