@@ -386,6 +386,7 @@ void Simulation::runSO(int epochs, int agencyFlag) {
             ee["v2"] = v2;
             for (auto l : kv.second) {
                 ee["lengths"].push_back(l);
+                edge->setAction(l, cutoff);
             }
             td["edges"].push_back(ee);
         }

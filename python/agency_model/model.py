@@ -372,7 +372,8 @@ class ExperimentGenerator(object):
         self.training_gui = True
         self.rest_length_step = self.dataset.cutoff / 1.05
         for i in self.dataset.cells.keys():
-            self.cells[i] = random.choice(range(0,11))
+            self.cells[i] = 5
+            #self.cells[i] = random.choice(range(0,11))
         for i in self.dataset.edges.keys():
             if self.rest_length_step is None:
                 self.rest_length_step = self.dataset.edges[i][0]
@@ -432,7 +433,8 @@ class ExperimentGenerator(object):
         self.model.eval()
 
         for i in self.cells.keys():
-            self.cells[i] = random.choice(range(0,11))
+            self.cells[i] = 5
+            #self.cells[i] = random.choice(range(0,11))
         for i in self.dataset.edges.keys():
             self.action_totals[i] = 0
         class_correct = 0
