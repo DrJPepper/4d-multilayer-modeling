@@ -4,7 +4,9 @@
   <img src="https://drjpepper.github.io/images/4d_modeler/diagram.png" width="70%" /> 
 </p>
 
-This repo contains the code from my thesis project developing a deformation
+This repo contains the code from my
+[thesis project](https://researchdiscovery.drexel.edu/esploro/outputs/doctoral/An-epithelium-inspired-deformation-modeling-framework-for/991022193194504721)
+developing a deformation
 modeling framework for epithelium-inspired, responsive 4D materials.
 
 ## Dependencies
